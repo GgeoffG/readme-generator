@@ -1,0 +1,15 @@
+{
+	"title": "Readme",
+	"about": "Creates Readme file",
+	"builtwith": [
+		"Next"
+	],
+	"includeinstall": false,
+	"usage": "Creates Readme",
+	"roadmap": "creates readme",
+	"license": "MIT",
+	"username": "Geoff",
+	"twitterhandle": "GgeoffG",
+	"github": "GgeoffG",
+	"email": "G@g.com"
+}
