@@ -2,10 +2,12 @@
 const markdown=require('./utils/generateMarkdown')
 const fs= require('fs')
 const inquirer= require('inquirer')
+const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 // const generateMarkdown= ({title,about,builtwith,includeinstall,usage,roadmap,license, username,twitterhandle,github,email}) =>
-inquirer
-.prompt(
+const userPrompt = () => {
+
+ return inquirer.prompt(
 [
     {
         type: 'input',
@@ -72,21 +74,21 @@ inquirer
         name: 'email'
     },
 ])
-.then( writeJson=(data)=> {
-fs.writeFile('README.json', JSON.stringify(data, null, `\t`), (err) => {
-    err? console.log(err) : console.log("file saved")
-})
-})
+}
+
 
 
 // TODO: Create a function to write README file
-async function writeToFile(fileName, data) {
-    let info=fs.readFile('README.json');
-    console.log(info)
+function writeToFile(fileName, page) {
+    fs.writeFile(fileName, page, (err) => 
+err? console.log(err) : console.log('success')
+);
 }
 
 // TODO: Create a function to initialize app
-function init() {}
-
+async function init() {
+const answers = await userPrompt();
+writeToFile('README.md',generateMarkdown(answers))
+}
 // Function call to initialize app
 init();

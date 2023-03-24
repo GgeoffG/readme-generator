@@ -5,6 +5,8 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <p>${data.about} 
+      </p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -31,13 +33,13 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-${about}
+${data.about}
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-
+${data.builtwith}
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -49,7 +51,7 @@ ${about}
 ### Prerequisites -->
 
 ### Installation
-
+$[data.instruct]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +66,7 @@ ${about}
 
 <!-- ROADMAP -->
 ## Roadmap
-
+${data.roadmap}
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,8 +96,8 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+${data.username} - [${data.twitterhandle}] (https://twitter.com/${data.twitterhandle}}) - ${data.email}
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/${data.github}/${data.reponame}](https://github.com/${data.github}/${data.reponame})
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>`
