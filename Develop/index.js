@@ -4,7 +4,6 @@ const fs= require('fs')
 const inquirer= require('inquirer')
 const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
-// const generateMarkdown= ({title,about,builtwith,includeinstall,usage,roadmap,license, username,twitterhandle,github,email}) =>
 const userPrompt = () => {
 
  return inquirer.prompt(
@@ -15,7 +14,7 @@ const userPrompt = () => {
         name: 'title',
     },
     {
-        type:'editor',
+        type:'input',
         message:'Tell us about your project',
         name:'about'
     },
@@ -32,18 +31,18 @@ const userPrompt = () => {
         default: false
     },
     {
-        type:'editor',
+        type:'input',
         message:'Please write your installation instructions',
         name:'instruct',
         when:(data) => data.includeinstall===true
     },
     {
-        type: 'editor',
+        type: 'input',
         message: 'Tell us about how to use your project',
         name:'usage'
     },
     {
-        type:"editor",
+        type:"input",
         message:"Tell us about future development of this project",
         name:'roadmap'
     },
