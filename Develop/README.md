@@ -1,28 +1,11 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
-function renderLicenseBadge(license) {
-
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `#${data.title}
+#Geoff's Readme Gen
   <!-- TABLE OF CONTENTS -->
   <details>
     <summary>Table of Contents</summary>
     <ol>
       <li>
         <a href="#about-the-project">About The Project</a>
-        <p>${data.about} 
+        <p>it does stuff 
         </p>
         <ul>
           <li><a href="#built-with">Built With</a></li>
@@ -50,13 +33,13 @@ function generateMarkdown(data) {
   ## About The Project
   
   [![Product Name Screen Shot][product-screenshot]](https://example.com)
-  ${data.about}
+  it does stuff
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
   
   ### Built With
-  ${data.builtwith}
+  Next,React,Vue,Angular,Svelte,Laravel,Bootstrap,JQuery
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
@@ -67,7 +50,7 @@ function generateMarkdown(data) {
   
   ### Prerequisites -->
   
- ${data.includeinstall ? `### Installation <br>  ${data.instruct}` : '' } 
+  
  
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,7 +66,7 @@ function generateMarkdown(data) {
   
   <!-- ROADMAP -->
   ## Roadmap
-  ${data.roadmap}
+  so much new stuff coming
   See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -104,21 +87,17 @@ function generateMarkdown(data) {
   
   
   <!-- LICENSE -->
-  ${data.license ? 
- ` ## License
+   ## License
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
-`: ''}
+
   
   
   <!-- CONTACT -->
   ## Contact
   
-  ${data.username} - [${data.twitterhandle}] (https://twitter.com/${data.twitterhandle}}) - ${data.email}
+  Geoff - [GgeoffG] (https://twitter.com/GgeoffG}) - Geoffrey.langenberg@gmail.com
   
-  Project Link: [https://github.com/${data.github}/${data.reponame}](https://github.com/${data.github}/${data.reponame})
+  Project Link: [https://github.com/GgeoffG/undefined](https://github.com/GgeoffG/undefined)
   
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>`;
-}
-
-module.exports = generateMarkdown;
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
