@@ -114,7 +114,7 @@ function generateMarkdown(data) {
   <!-- CONTACT -->
   ## Contact
   
-  ${data.username} - [${data.twitterhandle}] (https://twitter.com/${data.twitterhandle}}) - ${data.email}
+  ${data.username} - [@${data.twitterhandle}] (https://twitter.com/${data.twitterhandle}}) - ${data.email}
   
   Project Link: [https://github.com/${data.github}/${data.reponame}](https://github.com/${data.github}/${data.reponame})
   

@@ -9,6 +9,11 @@ const userPrompt = () => {
  return inquirer.prompt(
 [
     {
+        type: 'confirm',
+        message:'would you like to use an external editor for more detailed inputs?',
+        name: 'editor'
+    },
+    {
         type: 'input',
         message: 'What is the Title of your app?',
         name: 'title',
@@ -16,7 +21,14 @@ const userPrompt = () => {
     {
         type:'input',
         message:'Tell us about your project',
-        name:'about'
+        name:'about',
+        when:(data) =>  data.editor === false
+    },
+    {
+        type:'editor',
+        message:'Tell us about your project',
+        name:'about',
+        when:(data) =>  data.editor === true
     },
     {
         type: 'checkbox',
@@ -34,17 +46,37 @@ const userPrompt = () => {
         type:'input',
         message:'Please write your installation instructions',
         name:'instruct',
-        when:(data) => data.includeinstall===true
+        when:(data) => data.includeinstall===true && data.editor === false
+    },
+    {
+        type:'editor',
+        message:'Please write your installation instructions',
+        name:'instruct',
+        when:(data) => data.includeinstall===true && data.editor === true
     },
     {
         type: 'input',
         message: 'Tell us about how to use your project',
-        name:'usage'
+        name:'usage',
+        when:(data) =>  data.editor === false
+    },
+    {
+        type: 'editor',
+        message: 'Tell us about how to use your project',
+        name:'usage',
+        when:(data) =>  data.editor === true
     },
     {
         type:"input",
         message:"Tell us about future development of this project",
-        name:'roadmap'
+        name:'roadmap',
+        when:(data) =>  data.editor === false
+    },
+    {
+        type:"editor",
+        message:"Tell us about future development of this project",
+        name:'roadmap',
+        when:(data) =>  data.editor === true
     },
     {
         type:"rawlist",
@@ -72,6 +104,11 @@ const userPrompt = () => {
         message: 'Enter your email account',
         name: 'email'
     },
+    {
+        type:'input',
+        message: 'What is the name of your github repository?',
+        name: 'reponame'
+    }
 ])
 }
 
