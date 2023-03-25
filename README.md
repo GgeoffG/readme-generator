@@ -31,7 +31,7 @@
   
   <!-- ABOUT THE PROJECT -->
   ## About The Project
-  ![product-screenshot]](https://github.com/GgeoffG/readme-generator/blob/main/images/example.png)<br>
+  ![product-screenshot](https://github.com/GgeoffG/readme-generator/blob/main/images/example.png)<br>
   test
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
