@@ -31,7 +31,7 @@
   
   <!-- ABOUT THE PROJECT -->
   ## About The Project
-  ![product-screenshot]](https://github.com/test/test/blob/main/images/example.png)<br>
+  ![product-screenshot]](https://github.com/GgeoffG/readme-generator/blob/main/images/example.png)<br>
   test
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -66,7 +66,7 @@
   <!-- ROADMAP -->
   ## Roadmap
   test <br> 
-  See the [open issues](https://github.com/test/test/issues) for a full list of proposed features (and known issues).
+  See the [open issues](https://github.com/GgeoffG/readme-generator/issues) for a full list of proposed features (and known issues).
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -86,18 +86,14 @@
   
   
   <!-- LICENSE -->
-   ## License
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-  www.github.com/test/test/blob/main/LICENSE
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+  
   
   
   <!-- CONTACT -->
   ## Contact
   
-  test - [@test] (https://twitter.com/test}) - test
+  Geoffrey - [@GgeoffG] (https://twitter.com/GgeoffG}) - test
   
-  Project Link: [https://github.com/test/test](https://github.com/test/test)
+  Project Link: [https://github.com/GgeoffG/readme-generator](https://github.com/GgeoffG/readme-generator)
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
