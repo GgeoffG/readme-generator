@@ -79,10 +79,16 @@ const userPrompt = () => {
         when:(data) =>  data.editor === true
     },
     {
+        type:"confirm",
+        message:'Would you like to include license information?',
+        name: 'includelicense'
+    },
+    {
         type:"rawlist",
         message:'Pick a liscence',
-        choices:['MIT','GNU General Public v3','Boost Software License','BSD','Apache','Unlicense'],
-        name: 'license'
+        choices:['MIT','BSD 3-Clause','BSD 2-Clause','Boost Software License ','Apache','Unlicense'],
+        name: 'license',
+        when:(data) => data.includelicense === true,
     },
     {
         type:'input',
