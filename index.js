@@ -19,6 +19,18 @@ const userPrompt = () => {
         name: 'title',
     },
     {
+        type: 'confirm',
+        message: 'Would you like to include an image',
+        name: 'includeimage'
+    },
+    {
+        type: 'input',
+        message:'Please input file name with extension ie. example.png',
+        name: 'imagefile',
+        when: (data) => data.includeimage === true
+
+    },
+    {
         type:'input',
         message:'Tell us about your project',
         name:'about',
@@ -38,7 +50,7 @@ const userPrompt = () => {
     },
     {
         type:'confirm',
-        message:'Would you like to include installationg instructions?',
+        message:'Would you like to include installation instructions?',
         name:'includeinstall',
         default: false
     },

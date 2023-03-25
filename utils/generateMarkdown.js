@@ -69,8 +69,8 @@ function generateMarkdown(data) {
   
   <!-- ABOUT THE PROJECT -->
   ## About The Project
-  
-  [![Product Name Screen Shot][product-screenshot]](https://example.com)
+  ${data.includeimage ? 
+  `[![Product Name Screen Shot][product-screenshot]](./images/${data.imagefile})<br>` : ''}
   ${data.about}
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -104,8 +104,8 @@ function generateMarkdown(data) {
   
   <!-- ROADMAP -->
   ## Roadmap
-  ${data.roadmap}
-  See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+  ${data.roadmap} <br> 
+  See the [open issues](https://github.com/${data.github}/${data.reponame}/issues) for a full list of proposed features (and known issues).
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
