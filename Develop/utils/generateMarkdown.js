@@ -1,8 +1,28 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-
+let badge = "";
 function renderLicenseBadge(license) {
-
+  switch (license) {
+    case "MIT":
+      badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      break;
+    case "BSD 3-Clause":
+      badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+      break;
+    case "BSD 2-Clause":
+      badge = `[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
+      break;
+    case "Boost Software License":
+      badge =
+        "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+      break;
+    case "Apache":
+      badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      break;
+    case "Unlicense":
+      badge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
+      break;
+  }
 }
 
 // TODO: Create a function that returns the license link
@@ -15,6 +35,7 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseBadge(data.license);
   return `#${data.title}
   <!-- TABLE OF CONTENTS -->
   <details>
@@ -67,7 +88,7 @@ function generateMarkdown(data) {
   
   ### Prerequisites -->
   
- ${data.includeinstall ? `### Installation <br>  ${data.instruct}` : '' } 
+ ${data.includeinstall ? `### Installation <br>  ${data.instruct}` : ""} 
  
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -104,19 +125,27 @@ function generateMarkdown(data) {
   
   
   <!-- LICENSE -->
-  ${data.license ? 
- ` ## License
-  
+  ${
+    data.includelicense
+      ? ` ## License
+  ${badge} 
+  www.github.com/${data.github}/${data.reponame}/blob/main/LICENSE
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
-`: ''}
+`
+      : ""
+  }
   
   
   <!-- CONTACT -->
   ## Contact
   
-  ${data.username} - [@${data.twitterhandle}] (https://twitter.com/${data.twitterhandle}}) - ${data.email}
+  ${data.username} - [@${data.twitterhandle}] (https://twitter.com/${
+    data.twitterhandle
+  }}) - ${data.email}
   
-  Project Link: [https://github.com/${data.github}/${data.reponame}](https://github.com/${data.github}/${data.reponame})
+  Project Link: [https://github.com/${data.github}/${
+    data.reponame
+  }](https://github.com/${data.github}/${data.reponame})
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>`;
 }
