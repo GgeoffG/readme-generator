@@ -70,7 +70,7 @@ function generateMarkdown(data) {
   <!-- ABOUT THE PROJECT -->
   ## About The Project
   ${data.includeimage ? 
-  `[![Product Name Screen Shot][product-screenshot]](./images/${data.imagefile})<br>` : ''}
+  `![product-screenshot]](https://github.com/${data.github}/${data.reponame}/blob/main/images/${data.imagefile})<br>` : ''}
   ${data.about}
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
