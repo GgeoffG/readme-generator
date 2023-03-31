@@ -49,22 +49,27 @@ const userPrompt = () => {
         name: 'builtwith'
     },
     {
+        type: 'confirm',
+        message: "Are there any Prerequisites to running this program?",
+        name: 'includePreReq'
+    },
+    {
+        type: 'editor',
+        message: "What are the prerequisites to running this program?",
+        name: 'preReq',
+        when: (data) => data.includePreReq === true 
+    },
+    {
         type:'confirm',
         message:'Would you like to include installation instructions?',
         name:'includeinstall',
         default: false
     },
     {
-        type:'input',
-        message:'Please write your installation instructions',
-        name:'instruct',
-        when:(data) => data.includeinstall===true && data.editor === false
-    },
-    {
         type:'editor',
         message:'Please write your installation instructions',
         name:'instruct',
-        when:(data) => data.includeinstall===true && data.editor === true
+        when:(data) => data.includeinstall===true
     },
     {
         type: 'input',
@@ -89,6 +94,23 @@ const userPrompt = () => {
         message:"Tell us about future development of this project",
         name:'roadmap',
         when:(data) =>  data.editor === true
+    },
+    {
+        type: "confirm",
+        message: "Would you like to include guidelines for contributing?",
+        name: "includeCon",
+    },
+    {
+        type: 'confirm',
+        message: 'Would you like to use our basic contributing guidelines? (No will open an editor prompt)',
+        name: "basic",
+        when: (data) => data.includeCon === true
+    },
+    {
+        type: 'editor',
+        message: 'Please enter your contributing guidelines',
+        name: 'customguideline',
+        when: (data) => data.basic===false
     },
     {
         type:"confirm",
@@ -126,6 +148,23 @@ const userPrompt = () => {
         type:'input',
         message: 'What is the name of your github repository?',
         name: 'reponame'
+    },
+    {
+        type:'confirm',
+        message: 'Would you like to include any acknowlegements?',
+        name: 'includeAck'
+    },
+    {
+        type:'input',
+        message:'Who would you like to acknowlege?', 
+        name: 'acknowledge',
+        when:(data) => data.includeAck === true && data.editor === false
+    },
+    {
+        type:'editor',
+        message:'Who would you like to acknowlege?', 
+        name: 'acknowledge',
+        when:(data) => data.includeAck === true && data.editor === true
     }
 ])
 }

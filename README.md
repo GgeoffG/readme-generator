@@ -1,13 +1,12 @@
-#test
+#Readme Generator
   <!-- TABLE OF CONTENTS -->
   <details>
     <summary>Table of Contents</summary>
     <ol>
       <li>
         <a href="#about-the-project">About The Project</a>
-        <p>test 
-        </p>
         <ul>
+          <li><a href="#Project Image">Project Images</a></li>
           <li><a href="#built-with">Built With</a></li>
         </ul>
       </li>
@@ -31,25 +30,32 @@
   
   <!-- ABOUT THE PROJECT -->
   ## About The Project
+  ### Project Image  
   ![product-screenshot](https://github.com/GgeoffG/readme-generator/blob/main/images/example.png)<br>
-  test
+  This readme generator takes in the users input to various questions and formats a proffesional read me for their projects.
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
   
   ### Built With
-  Next
+  
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
   
   <!-- GETTING STARTED -->
-  <!-- ## Getting Started
+  
+   ## Getting Started
   
   
-  ### Prerequisites -->
-  
-  
+  ### Prerequisites <br>
+  *npm
+
+npm install npm@latest -g
+*inquirer npm install inquirer@8.2.4
+ ### Installation <br> 
+  1.) Clone the repo 2.) Install npm packages 3.) Install inquirer
+ 
  
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -57,7 +63,12 @@
   
   
   <!-- USAGE EXAMPLES -->
-  ## Usage
+  ## Usage <br>
+  After installation, run the program in your terminal by using node index.
+For the images section, please add all images to an images folder for proper links on github.
+For the License section please include a LICENSE file for proper links on github.
+After initialization answer the prompts and your readme will be generated.
+
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -65,7 +76,8 @@
   
   <!-- ROADMAP -->
   ## Roadmap
-  test <br> 
+  -Connect readme automaticall to Github Issues for this section -Include additional functionality for CLI -Additional generation options/features
+ <br> 
   See the [open issues](https://github.com/GgeoffG/readme-generator/issues) for a full list of proposed features (and known issues).
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -74,26 +86,30 @@
   
   <!-- CONTRIBUTING -->
   ## Contributing
-  
-  1. Fork the Project
-  2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-  3. Commit your Changes (git commit -m 'Add some AmazingFeature)
-  4. Push to the Branch (git push origin feature/AmazingFeature)
-  5. Open a Pull Request
-  
+  This project is not accepting contributions
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
   
   <!-- LICENSE -->
-  
+   ## License <br>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+  www.github.com/GgeoffG/readme-generator/blob/main/LICENSE
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
   
   
   <!-- CONTACT -->
   ## Contact
   
-  Geoffrey - [@GgeoffG] (https://twitter.com/GgeoffG}) - test
+  Geoffrey Langenberg - [@GeoffLangWrites] (https://twitter.com/GeoffLangWrites) - Geoffrey.langenberg@gmail.com
   
   Project Link: [https://github.com/GgeoffG/readme-generator](https://github.com/GgeoffG/readme-generator)
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
+  
+  <!-- ACKNOWLEDGMENTS -->
+  ## Acknowledgments
+ Thanks to othneildrew (https://github.com/othneildrew ) who provided an amazing README template. (https://github.com/othneildrew/Best-README-Template).  
+  

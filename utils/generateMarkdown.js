@@ -43,9 +43,8 @@ function generateMarkdown(data) {
     <ol>
       <li>
         <a href="#about-the-project">About The Project</a>
-        <p>${data.about} 
-        </p>
         <ul>
+          ${data.includeimage? `<li><a href="#Project Image">Project Images</a></li>` : ''}
           <li><a href="#built-with">Built With</a></li>
         </ul>
       </li>
@@ -70,7 +69,8 @@ function generateMarkdown(data) {
   <!-- ABOUT THE PROJECT -->
   ## About The Project
   ${data.includeimage ? 
-  `![product-screenshot](https://github.com/${data.github}/${data.reponame}/blob/main/images/${data.imagefile})<br>` : ''}
+  `### Project Image  
+  ![product-screenshot](https://github.com/${data.github}/${data.reponame}/blob/main/images/${data.imagefile})<br>` : ''}
   ${data.about}
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -83,12 +83,15 @@ function generateMarkdown(data) {
   
   
   <!-- GETTING STARTED -->
-  <!-- ## Getting Started
+  ${data.includePreReq || data.includeinstall ?`
+   ## Getting Started` : ''}
   
-  
-  ### Prerequisites -->
-  
- ${data.includeinstall ? `### Installation <br>  ${data.instruct}` : ""} 
+  ${data.includePreReq ? `
+  ### Prerequisites <br>
+  ${data.preReq}` : ''
+  }
+ ${data.includeinstall ? `### Installation <br> 
+  ${data.instruct}` : ""} 
  
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,7 +99,8 @@ function generateMarkdown(data) {
   
   
   <!-- USAGE EXAMPLES -->
-  ## Usage
+  ## Usage <br>
+  ${data.usage}
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
@@ -113,13 +117,13 @@ function generateMarkdown(data) {
   
   <!-- CONTRIBUTING -->
   ## Contributing
-  
-  1. Fork the Project
+  ${data.includeCon ? `${data.basic ? 
+  `1. Fork the Project
   2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
   3. Commit your Changes (git commit -m 'Add some AmazingFeature)
   4. Push to the Branch (git push origin feature/AmazingFeature)
-  5. Open a Pull Request
-  
+  5. Open a Pull Request`: `${data.customguideline}`
+  }` : 'This project is not accepting contributions'}
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
@@ -127,7 +131,7 @@ function generateMarkdown(data) {
   <!-- LICENSE -->
   ${
     data.includelicense
-      ? ` ## License
+      ? ` ## License <br>
   ${badge} 
   www.github.com/${data.github}/${data.reponame}/blob/main/LICENSE
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -141,13 +145,22 @@ function generateMarkdown(data) {
   
   ${data.username} - [@${data.twitterhandle}] (https://twitter.com/${
     data.twitterhandle
-  }}) - ${data.email}
+  }) - ${data.email}
   
   Project Link: [https://github.com/${data.github}/${
     data.reponame
   }](https://github.com/${data.github}/${data.reponame})
   
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>`;
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
+  
+  <!-- ACKNOWLEDGMENTS -->
+  ${data.includeAck ?
+  `## Acknowledgments
+ ${data.acknowledge}  `: ''}
+  `;
+
+  
 }
 
 module.exports = generateMarkdown;
